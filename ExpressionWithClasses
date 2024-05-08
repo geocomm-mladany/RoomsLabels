@@ -46,6 +46,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
 
 # Class 2 - In beyond 1:500 out beyond 1:725
+
 def FindLabel([Shape__Area], [featnum], [featname]):
     area = float([Shape__Area])
     baseFontSizeNum = 5
@@ -130,6 +131,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
 
 # Class 4 - In beyond 1:1100, Out beyond 1:1800
+
 def FindLabel([Shape__Area], [featnum], [featname]):
     area = float([Shape__Area])
     baseFontSizeNum = 4
