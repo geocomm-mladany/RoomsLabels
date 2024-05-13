@@ -1,4 +1,4 @@
-This folder contains label expressions for different classes for the GeoComm Indoor Mapping Toolkit in ArcGIS Pro. 
+This folder contains label expressions using label classes for the GeoComm Indoor Mapping Toolkit in ArcGIS Pro. 
 It allows for room number and name visualization relative to the size of the room polygon.
 It prioritizes featnum over featname if both don't fit within the polygon area.
 If the featname is "ROOM" it will not show up unless there is also no featnum.
