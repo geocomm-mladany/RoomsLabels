@@ -1,1 +1,16 @@
 
+var area = $feature.Shape__Area;
+var baseFontSizeNum = 7;
+var baseFontSizeName = 3;
+var scaleMultiplier = 0.05;
+var scaledFontSizeNum = baseFontSizeNum + (area * scaleMultiplier);
+var scaledFontSizeName = baseFontSizeName + (area * scaleMultiplier);
+var minFontSizeNum = 2;
+var minFontSizeName = 1;
+var maxFontSize = 10;
+var finalFontSizeNum = Min(Max(scaledFontSizeNum, minFontSizeNum), maxFontSize);
+var finalFontSizeName = Min(Max(scaledFontSizeName, minFontSizeName), maxFontSize);
+
+var featname = Upper($feature.featname)
+var featnum = Upper($feature.featnum)
+
