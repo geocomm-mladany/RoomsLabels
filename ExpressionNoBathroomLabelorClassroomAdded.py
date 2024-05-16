@@ -98,7 +98,7 @@ def FindLabel([Shape__Area], [featnum], [featname],[type]):
 def FindLabel([Shape__Area], [featnum], [featname],[type]):
     area = float([Shape__Area])
     baseFontSizeNum = 4
-    baseFontSizeName =2
+    baseFontSizeName =1
     scaleMultiplier = 0.02
     scaledFontSizeNum = baseFontSizeNum + (area * scaleMultiplier)
     scaledFontSizeName = baseFontSizeName + (area * scaleMultiplier)
