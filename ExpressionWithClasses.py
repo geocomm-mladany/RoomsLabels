@@ -35,11 +35,11 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM":
+        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
@@ -79,11 +79,11 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM":
+        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
@@ -122,11 +122,11 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM":
+        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
@@ -165,11 +165,11 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM":
+        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
