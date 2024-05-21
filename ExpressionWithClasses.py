@@ -5,7 +5,7 @@
 
 # Class 1 - In beyond None, Out beyond 1:500
 
-def FindLabel([Shape__Area], [featnum], [featname]):
+def FindLabel([Shape__Area], [featnum], [featname], [type]):
     area = float([Shape__Area])
     baseFontSizeNum = 7
     baseFontSizeName =3
@@ -20,6 +20,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
     
     featname = ([featname])
     featnum = ([featnum])
+    type = [type]
     
     featname = featname.upper() if featname else None
     featnum = featnum.upper() if featnum else None
@@ -34,9 +35,9 @@ def FindLabel([Shape__Area], [featnum], [featname]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featname == "CORRIDOR":
+        elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featnum is not None and featname == "ROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
@@ -47,7 +48,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
 
 # Class 2 - In beyond 1:500 out beyond 1:725
 
-def FindLabel([Shape__Area], [featnum], [featname]):
+def FindLabel([Shape__Area], [featnum], [featname], [type]):
     area = float([Shape__Area])
     baseFontSizeNum = 5
     baseFontSizeName = 2
@@ -63,6 +64,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
     
     featname = ([featname])
     featnum = ([featnum])
+    type = [type]
     
     featname = featname.upper() if featname else None
     featnum = featnum.upper() if featnum else None
@@ -77,9 +79,9 @@ def FindLabel([Shape__Area], [featnum], [featname]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featname == "CORRIDOR":
+        elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featnum is not None and featname == "ROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
@@ -90,11 +92,11 @@ def FindLabel([Shape__Area], [featnum], [featname]):
 
 # Class 3 - In beyond 1:725, Out beyond 1:1100
 
-def FindLabel([Shape__Area], [featnum], [featname]):
+def FindLabel([Shape__Area], [featnum], [featname], [type]):
     area = float([Shape__Area])
     baseFontSizeNum = 4
     baseFontSizeName = 2
-    scaleMultiplier = 0.02
+    scaleMultiplier = 0.01
     scaledFontSizeNum = baseFontSizeNum + (area * scaleMultiplier)
     scaledFontSizeName = baseFontSizeName + (area * scaleMultiplier)
     minFontSizeNum = 2
@@ -105,6 +107,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
     
     featname = ([featname])
     featnum = ([featnum])
+    type = [type]
     
     featname = featname.upper() if featname else None
     featnum = featnum.upper() if featnum else None
@@ -119,9 +122,9 @@ def FindLabel([Shape__Area], [featnum], [featname]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featname == "CORRIDOR":
+        elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featnum is not None and featname == "ROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
@@ -132,7 +135,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
 
 # Class 4 - In beyond 1:1100, Out beyond 1:1800
 
-def FindLabel([Shape__Area], [featnum], [featname]):
+def FindLabel([Shape__Area], [featnum], [featname], [type]):
     area = float([Shape__Area])
     baseFontSizeNum = 4
     baseFontSizeName = 1
@@ -147,6 +150,7 @@ def FindLabel([Shape__Area], [featnum], [featname]):
     
     featname = ([featname])
     featnum = ([featnum])
+    type = [type]
     
     featname = featname.upper() if featname else None
     featnum = featnum.upper() if featnum else None
@@ -161,9 +165,9 @@ def FindLabel([Shape__Area], [featnum], [featname]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CORRIDOR":
+        if featname is not None and featnum is not None and featname != "ROOM" and type != "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featname == "CORRIDOR":
+        elif type == "CORRIDOR":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featnum is not None and featname == "ROOM":
             return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
