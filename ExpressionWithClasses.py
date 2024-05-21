@@ -193,5 +193,5 @@ def FindLabel([Shape__Area], [featnum], [featname]):
     if featnum is not None:
         return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
     elif featnum is None:
-        return " "
+        return None
 
