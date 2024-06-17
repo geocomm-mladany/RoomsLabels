@@ -40,16 +40,16 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "corridor":
+        if featname is not None and featnum is not None and type != "corridor":
+            featname = featname.replace("CLASSROOM", "").replace("ROOM", "")
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "corridor":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
-            return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featname is None:
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
+
 
 
 # Class 2 - In beyond 1:500 out beyond 1:725
@@ -89,16 +89,16 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "corridor":
+        if featname is not None and featnum is not None and type != "corridor":
+            featname = featname.replace("CLASSROOM", "").replace("ROOM", "")
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "corridor":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
-            return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featname is None:
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
+
 
 
 # Class 3 - In beyond 1:725, Out beyond 1:1100
@@ -138,16 +138,16 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "corridor":
+        if featname is not None and featnum is not None and type != "corridor":
+            featname = featname.replace("CLASSROOM", "").replace("ROOM", "")
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "corridor":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
-            return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featname is None:
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
+
 
 # Class 4 - In beyond 1:1100, Out beyond 1:1800
 
@@ -186,16 +186,16 @@ def FindLabel([Shape__Area], [featnum], [featname], [type]):
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
     else:
-        if featname is not None and featnum is not None and featname != "ROOM" and featname != "CLASSROOM" and type != "corridor":
+        if featname is not None and featnum is not None and type != "corridor":
+            featname = featname.replace("CLASSROOM", "").replace("ROOM", "")
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>\n<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif type == "corridor":
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>" + " " + "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
-        elif featnum is not None and featname == "ROOM" or featname == "CLASSROOM":
-            return "<FNT size='" + str(finalFontSizeNum) + " '>" + featnum + "</FNT>"
         elif featnum is None:
             return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
         elif featname is None:
             return "<FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
+
 
 # Class 5 - In beyond 1:1800, Out beyond None
 
