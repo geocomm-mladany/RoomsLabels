@@ -1,5 +1,6 @@
 
-var area = $feature.Shape__Area;
+
+var polyarea = $feature.Shape__Area;
 var baseFontSizeNum = 7;
 var baseFontSizeName = 3;
 var scaleMultiplier = 0.05;
@@ -11,6 +12,34 @@ var maxFontSize = 10;
 var finalFontSizeNum = Min(Max(scaledFontSizeNum, minFontSizeNum), maxFontSize);
 var finalFontSizeName = Min(Max(scaledFontSizeName, minFontSizeName), maxFontSize);
 
-var featname = Upper($feature.featname)
-var featnum = Upper($feature.featnum)
+var featname = $feature.featname;
+var featnum = $feature.featnum;
+var type = $feature.type;
+
+var featname_length = Count(featname);
+var featnum_length = Count(featnum);
+var combined_length = featname_length + featnum_length;
+
+if ((combined_length * finalFontSizeName > polyarea) || (combined_length * finalFontSizeNum > polyarea)) {
+    if (featnum != null) {
+        return "FNT size='" + str(finalFontSizeNum) + "'>" + featnum + "</FNT>"
+    }
+    else if (featnum == null) {
+        return "<FNT size='" + str(finalFontSizeName) + "'>" + featname + "</FNT>"
+    }
+}
+else {
+    if (featname != null && featnum != null && type != "corridor") {
+        return "<FNT size='" + Text(finalFontSizeNum) + "'>" + Text(featnum) + "</FNT>\n<FNT size='" + Text(finalFontSizeName) + "'>" + Text(featname) + "</FNT>";
+    }
+    if (featnum != null && featname =="ROOM") {
+        return "<FNT size='" + Text(finalFontSizeNum) + "'>" + Text(featnum) + "</FNT>";
+    }
+    if ($feature.featnum == null) {
+        return "<FNT size='" + Text(finalFontSizeName) + "'>" + Text(featname) + "</FNT>";
+    } 
+    if ($feature.featname == null) {
+        return "<FNT size='" + Text(finalFontSizeNum) + "'>" + Text(featnum) + "</FNT>"
+    }
+}
 
