@@ -110,7 +110,7 @@ if ((type == "bathroom") || (type == "transition")) {
 var polyarea = $feature.Shape__Area;
 var baseFontSizeNum = 4;
 var baseFontSizeName = 2;
-var scaleMultiplier = 0.01;
+var scaleMultiplier = 0.02;
 var minFontSizeNum = 2;
 var minFontSizeName = 1;
 var maxFontSize = 10;
